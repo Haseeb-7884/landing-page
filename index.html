@@ -66,14 +66,6 @@
         .hamburger.active {
             transform: rotate(90deg);
         }
-        .privacy-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease;
-        }
-        .privacy-content.active {
-            max-height: 2000px;
-        }
     </style>
 </head>
 <body>
@@ -129,8 +121,7 @@
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Who We Are</h2>
             <div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
                 <div class="w-full md:w-1/2 fade-in">
-                    <p class="text-lg text-gray-600 text-center md:text-left">At Ghulam Shabeer Services, we specialize in connecting homeowners and businesses with highly skilled, vetted professionals across multiple service industries. With years of experience in the home services sector, we understand the importance of reliability, quality workmanship, and timely service delivery.</p>
-                    <p class="text-lg text-gray-600 text-center md:text-left mt-4">Our network includes certified electricians, HVAC technicians, plumbers, roofing experts, appliance repair specialists, locksmiths, and pest control professionals—all committed to delivering exceptional service and customer satisfaction.</p>
+                    <p class="text-lg text-gray-600 text-center md:text-left">At Ghulam Shabeer Services, we connect people with trusted service providers across the United States. Whether you need insurance, home repair, or financial help, we make it easy to reach the right experts.</p>
                 </div>
                 <div class="w-full md:w-1/2 flex justify-center fade-in">
                     <div class="w-64 h-64 bg-gray-200 rounded-full overflow-hidden flex items-center justify-center">
@@ -270,44 +261,6 @@
         </div>
     </section>
 
-    <!-- Privacy Policy Section -->
-    <section id="privacy" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Privacy Policy</h2>
-            <div class="max-w-3xl mx-auto">
-                <div class="mb-6">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">Information Collection</h3>
-                    <p class="text-gray-600">We collect information that you provide directly to us, such as when you request services, contact us, or otherwise communicate with us. This may include your name, email address, phone number, and details about the service you need.</p>
-                </div>
-                
-                <div class="mb-6">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">Use of Information</h3>
-                    <p class="text-gray-600">We use the information we collect to: provide and improve our services, connect you with service providers, communicate with you about services, and send you related information.</p>
-                </div>
-                
-                <div class="mb-6">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">Sharing of Information</h3>
-                    <p class="text-gray-600">We may share your information with service providers who perform services on our behalf. We also share your service requests with our network of professionals to connect you with appropriate service providers.</p>
-                </div>
-                
-                <div class="mb-6">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">Data Security</h3>
-                    <p class="text-gray-600">We take reasonable measures to help protect information about you from loss, theft, misuse and unauthorized access, disclosure, alteration, and destruction.</p>
-                </div>
-                
-                <div class="mb-6">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">Your Choices</h3>
-                    <p class="text-gray-600">You may update or correct information about yourself at any time by contacting us. You may also opt out of receiving promotional communications from us by following the instructions in those communications.</p>
-                </div>
-                
-                <div class="mb-6">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">Contact Us</h3>
-                    <p class="text-gray-600">If you have any questions about this Privacy Policy, please contact us at <a href="mailto:ghulamshabeer.marketing@gmail.com" class="text-primary hover:underline">ghulamshabeer.marketing@gmail.com</a>.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
@@ -317,8 +270,8 @@
                 </div>
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="mb-4 md:mb-0 md:mr-8">
-                        <a href="#privacy" class="text-gray-400 hover:text-white mr-4">Privacy Policy</a>
-                        <a href="#terms" class="text-gray-400 hover:text-white">Terms</a>
+                        <a href="#" class="text-gray-400 hover:text-white mr-4">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Terms</a>
                     </div>
                     <div class="flex flex-col md:flex-row">
                         <a href="mailto:ghulamshabeer.marketing@gmail.com" class="text-gray-400 hover:text-white mb-2 md:mb-0 md:mr-6">
@@ -371,13 +324,6 @@
                 }
             });
         }
-
-        // Toggle privacy policy content
-        document.getElementById('privacy-toggle').addEventListener('click', function() {
-            document.getElementById('privacy-content').classList.toggle('active');
-            this.querySelector('span').textContent = 
-                document.getElementById('privacy-content').classList.contains('active') ? 'Show Less' : 'Read More';
-        });
 
         // Initial check and then on scroll
         checkFade();
