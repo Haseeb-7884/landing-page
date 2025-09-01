@@ -1,15 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghulam Shabeer Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007bff',
+                        secondary: '#28a745',
+                        darkBlue: '#001f3f',
+                        lightBlue: '#e6f2ff',
+                        lightGray: '#f8f9fa',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #007bff;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .service-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hamburger {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .hamburger.active {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-gray-800">Ghulam Shabeer Services</div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-600 hover:text-primary">Home</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-primary">About</a>
+                <a href="#services" class="nav-link text-gray-600 hover:text-primary">Services</a>
+                <a href="#how-it-works" class="nav-link text-gray-600 hover:text-primary">How It Works</a>
+                <a href="#why-choose-us" class="nav-link text-gray-600 hover:text-primary">Why Choose Us</a>
+                <a href="#contact" class="nav-link text-gray-600 hover:text-primary">Contact</a>
+            </div>
+            
+            <!-- Mobile Hamburger Menu -->
+            <div class="md:hidden hamburger" id="hamburger">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Items -->
+        <div class="hidden md:hidden bg-white py-4 px-4" id="mobile-menu">
+            <a href="#home" class="block py-2 text-gray-600 hover:text-primary">Home</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-primary">About</a>
+            <a href="#services" class="block py-2 text-gray-600 hover:text-primary">Services</a>
+            <a href="#how-it-works" class="block py-2 text-gray-600 hover:text-primary">How It Works</a>
+            <a href="#why-choose-us" class="block py-2 text-gray-600 hover:text-primary">Why Choose Us</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-primary">Contact</a>
+        </div>
+    </nav>
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>One-Page Landing Page</title>
-    </head>
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-lightGray">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6 fade-in">Get Connected With Trusted Service Providers Fast</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 fade-in">Insurance, home services, and financial help — one call away.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in">
+                <a href="tel:+923015996903" class="bg-secondary hover:bg-green-600 text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Call Now</a>
+                <a href="mailto:ghulamshabeer.marketing@gmail.com" class="border border-gray-300 hover:border-primary text-gray-700 hover:text-primary font-medium py-3 px-8 rounded-full transition duration-300">Email Us</a>
+            </div>
+        </div>
+    </section>
 
-    <body>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </body>
-  </html>
-  
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Who We Are</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
+                <div class="w-full md:w-1/2 fade-in">
+                    <p class="text-lg text-gray-600 text-center md:text-left">At Ghulam Shabeer Services, we connect people with trusted service providers across the United States. Whether you need insurance, home repair, or financial help, we make it easy to reach the right experts.</p>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center fade-in">
+                    <div class="w-64 h-64 bg-gray-200 rounded-full overflow-hidden flex items-center justify-center">
+                        <i class="fas fa-headset text-6xl text-primary"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-lightGray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Cards -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-bolt"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Electrical Services</h3>
+                    <p class="text-gray-600 mb-4">Safe, reliable solutions for wiring, panel upgrades, lighting, and repairs.</p>
+                    <a href="tel:+923015996903" class="inline-block bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition duration-300">Call Now</a>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-tools"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Appliance Repair</h3>
+                    <p class="text-gray-600 mb-4">Fast, dependable repairs for refrigerators, ovens, washers, dryers, and more.</p>
+                    <a href="tel:+923015996903" class="inline-block bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition duration-300">Call Now</a>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-fan"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">HVAC Services</h3>
+                    <p class="text-gray-600 mb-4">Installation, repair, and maintenance of heating, cooling, and ventilation systems.</p>
+                    <a href="tel:+923015996903" class="inline-block bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition duration-300">Call Now</a>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-home"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Roofing Services</h3>
+                    <p class="text-gray-600 mb-4">Quality roof inspections, repairs, replacements, and installations.</p>
+                    <a href="tel:+923015996903" class="inline-block bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition duration-300">Call Now</a>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-faucet"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Plumbing Services</h3>
+                    <p class="text-gray-600 mb-4">Leak detection, water heater installs, drain cleaning, and more.</p>
+                    <a href="tel:+923015996903" class="inline-block bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition duration-300">Call Now</a>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-key"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Locksmith Services</h3>
+                    <p class="text-gray-600 mb-4">24/7 emergency lockouts, rekeying, and security upgrades.</p>
+                    <a href="tel:+923015996903" class="inline-block bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition duration-300">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-lightBlue">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="text-center fade-in">
+                    <div class="text-5xl text-primary mb-4">1</div>
+                    <h3 class="text-xl font-semibold mb-2">Search for your service</h3>
+                    <p class="text-gray-600">Browse our wide range of services and find what you need.</p>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div class="text-5xl text-primary mb-4">2</div>
+                    <h3 class="text-xl font-semibold mb-2">Call our dedicated phone line</h3>
+                    <p class="text-gray-600">Reach out to our friendly customer service team.</p>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div class="text-5xl text-primary mb-4">3</div>
+                    <h3 class="text-xl font-semibold mb-2">Get connected to licensed providers</h3>
+                    <p class="text-gray-600">We connect you with trusted professionals in your area.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="py-16 bg-darkBlue text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="flex items-start mb-6 fade-in">
+                    <div class="text-secondary text-xl mr-4"><i class="fas fa-check-circle"></i></div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-1">Fast and reliable connections</h3>
+                        <p class="text-gray-300">We quickly connect you with the right service providers.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start mb-6 fade-in">
+                    <div class="text-secondary text-xl mr-4"><i class="fas fa-check-circle"></i></div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-1">Services available nationwide</h3>
+                        <p class="text-gray-300">We serve customers across the entire United States.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start mb-6 fade-in">
+                    <div class="text-secondary text-xl mr-4"><i class="fas fa-check-circle"></i></div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-1">100% free to call and connect</h3>
+                        <p class="text-gray-300">No charges for using our connection service.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start mb-6 fade-in">
+                    <div class="text-secondary text-xl mr-4"><i class="fas fa-check-circle"></i></div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-1">Trusted providers only</h3>
+                        <p class="text-gray-300">We vet all service providers for quality and reliability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="contact" class="py-16 bg-secondary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Need help now? Call us today and get connected instantly.</h2>
+            <p class="text-xl mb-10">+92 301 5996903</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+923015996903" class="bg-white hover:bg-gray-100 text-secondary font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Click to Call</a>
+                <a href="mailto:ghulamshabeer.marketing@gmail.com" class="border border-white hover:bg-white hover:text-secondary text-white font-medium py-3 px-8 rounded-full transition duration-300">Email Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="text-gray-400">© 2025 Ghulam Shabeer Ahmad – Connecting Customers with Services Nationwide</p>
+                </div>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="mb-4 md:mb-0 md:mr-8">
+                        <a href="#" class="text-gray-400 hover:text-white mr-4">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Terms</a>
+                    </div>
+                    <div class="flex flex-col md:flex-row">
+                        <a href="mailto:ghulamshabeer.marketing@gmail.com" class="text-gray-400 hover:text-white mb-2 md:mb-0 md:mr-6">
+                            <i class="fas fa-envelope mr-2"></i>ghulamshabeer.marketing@gmail.com
+                        </a>
+                        <a href="tel:+923015996903" class="text-gray-400 hover:text-white">
+                            <i class="fas fa-phone mr-2"></i>+92 301 5996903
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    document.getElementById('hamburger').classList.remove('active');
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Fade-in animation on scroll
+        function checkFade() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(el => {
+                const position = el.getBoundingClientRect();
+                if (position.top < window.innerHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        // Initial check and then on scroll
+        checkFade();
+        window.addEventListener('scroll', checkFade);
+    </script>
+</body>
+</html>
