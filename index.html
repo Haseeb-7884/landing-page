@@ -4,20 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghulam Shabeer Services</title>
+  <meta name="description" content="Ghulam Shabeer Services - Trusted home service professionals for all your repair and maintenance needs">
+  <title>Ghulam Shabeer Services | Trusted Home Service Professionals</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: '#007bff',
-            secondary: '#28a745',
-            darkBlue: '#001f3f',
-            lightBlue: '#e6f2ff',
-            lightGray: '#f8f9fa',
+            primary: '#2563eb',
+            primaryDark: '#1d4ed8',
+            secondary: '#16a34a',
+            secondaryDark: '#15803d',
+            darkBlue: '#0f172a',
+            lightBlue: '#eff6ff',
+            lightGray: '#f8fafc',
+            darkGray: '#1e293b'
           }
         }
       }
@@ -40,7 +44,7 @@
       height: 2px;
       bottom: -5px;
       left: 0;
-      background-color: #007bff;
+      background-color: #2563eb;
       transition: width 0.3s;
     }
 
@@ -50,11 +54,12 @@
 
     .service-card {
       transition: transform 0.3s, box-shadow 0.3s;
+      border-top: 4px solid #2563eb;
     }
 
     .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     }
 
     .fade-in {
@@ -76,23 +81,144 @@
     .hamburger.active {
       transform: rotate(90deg);
     }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+    }
+
+    .section-padding {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .testimonial-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      border-left: 4px solid #2563eb;
+    }
+
+    /* WhatsApp icon styles */
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      z-index: 1000;
+      display: inline-block;
+    }
+
+    .whatsapp-icon img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .wave {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: rgba(37, 211, 102, 0.4);
+      transform: translate(-50%, -50%);
+      animation: wave-animation 2s infinite;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    .wave:nth-child(2) {
+      animation-delay: 0.7s;
+    }
+
+    .wave:nth-child(3) {
+      animation-delay: 1.4s;
+    }
+
+    @keyframes wave-animation {
+      0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.7;
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(2.2);
+        opacity: 0;
+      }
+    }
+
+    .stats-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(21, 128, 61, 0.4);
+    }
+
+    .btn-email {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      transition: all 0.3s ease;
+    }
+
+    .btn-email:hover {
+      background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(107, 114, 128, 0.4);
+    }
   </style>
 </head>
 
-<body>
+<body class="antialiased">
   <!-- Navigation Bar -->
   <nav class="fixed w-full bg-white shadow-md z-50">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="text-xl font-bold text-gray-800">Ghulam Shabeer Services</div>
+      <div class="flex items-center">
+        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-3">GS</div>
+        <div class="text-xl font-bold text-gray-800">Ghulam Shabeer <span class="text-primary">Services</span></div>
+      </div>
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex space-x-8">
-        <a href="#home" class="nav-link text-gray-600 hover:text-primary">Home</a>
-        <a href="#about" class="nav-link text-gray-600 hover:text-primary">About</a>
-        <a href="#services" class="nav-link text-gray-600 hover:text-primary">Services</a>
-        <a href="#how-it-works" class="nav-link text-gray-600 hover:text-primary">How It Works</a>
-        <a href="#why-choose-us" class="nav-link text-gray-600 hover:text-primary">Why Choose Us</a>
-        <a href="#contact" class="nav-link text-gray-600 hover:text-primary">Contact</a>
+        <a href="#home" class="nav-link text-gray-600 hover:text-primary font-medium">Home</a>
+        <a href="#about" class="nav-link text-gray-600 hover:text-primary font-medium">About</a>
+        <a href="#services" class="nav-link text-gray-600 hover:text-primary font-medium">Services</a>
+        <a href="#how-it-works" class="nav-link text-gray-600 hover:text-primary font-medium">How It Works</a>
+        <a href="#testimonials" class="nav-link text-gray-600 hover:text-primary font-medium">Testimonials</a>
+        <a href="#contact" class="nav-link text-gray-600 hover:text-primary font-medium">Contact</a>
+      </div>
+
+      <!-- Call Now Button (Desktop) -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="mailto:ghulamshabeer.marketing@gmail.com" class="btn-email text-white font-medium py-2 px-4 rounded-full text-sm">
+          <i class="fas fa-envelope mr-1"></i>Email
+        </a>
+        <a href="tel:+923015996903" class="btn-primary text-white font-medium py-2 px-4 rounded-full text-sm">
+          <i class="fas fa-phone-alt mr-1"></i>Call Now
+        </a>
       </div>
 
       <!-- Mobile Hamburger Menu -->
@@ -105,54 +231,142 @@
     </div>
 
     <!-- Mobile Menu Items -->
-    <div class="hidden md:hidden bg-white py-4 px-4" id="mobile-menu">
-      <a href="#home" class="block py-2 text-gray-600 hover:text-primary">Home</a>
-      <a href="#about" class="block py-2 text-gray-600 hover:text-primary">About</a>
-      <a href="#services" class="block py-2 text-gray-600 hover:text-primary">Services</a>
-      <a href="#how-it-works" class="block py-2 text-gray-600 hover:text-primary">How It Works</a>
-      <a href="#why-choose-us" class="block py-2 text-gray-600 hover:text-primary">Why Choose Us</a>
-      <a href="#contact" class="block py-2 text-gray-600 hover:text-primary">Contact</a>
+    <div class="hidden md:hidden bg-white py-4 px-4 shadow-lg" id="mobile-menu">
+      <a href="#home" class="block py-3 px-4 text-gray-600 hover:text-primary hover:bg-blue-50 rounded-md">Home</a>
+      <a href="#about" class="block py-3 px-4 text-gray-600 hover:text-primary hover:bg-blue-50 rounded-md">About</a>
+      <a href="#services" class="block py-3 px-4 text-gray-600 hover:text-primary hover:bg-blue-50 rounded-md">Services</a>
+      <a href="#how-it-works" class="block py-3 px-4 text-gray-600 hover:text-primary hover:bg-blue-50 rounded-md">How It Works</a>
+      <a href="#testimonials" class="block py-3 px-4 text-gray-600 hover:text-primary hover:bg-blue-50 rounded-md">Testimonials</a>
+      <a href="#contact" class="block py-3 px-4 text-gray-600 hover:text-primary hover:bg-blue-50 rounded-md">Contact</a>
+      <div class="mt-4 pt-4 border-t border-gray-100 space-y-3">
+        <a href="mailto:ghulamshabeer.marketing@gmail.com" class="btn-email block text-center text-white font-medium py-3 rounded-full">
+          <i class="fas fa-envelope mr-2"></i>Email Us
+        </a>
+        <a href="tel:+923015996903" class="btn-primary block text-center text-white font-medium py-3 rounded-full">
+          <i class="fas fa-phone-alt mr-2"></i>Call Now
+        </a>
+      </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-lightGray">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6 fade-in">Get Connected With Trusted Service Providers
-        Fast</h1>
-      <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 fade-in">
-        Home Services & Repairs – Trusted Professionals at Your Doorstep
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in">
-        <a href="tel:+923015996903"
-          class="bg-secondary hover:bg-green-600 text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Call
-          Now</a>
-        <a href="mailto:ghulamshabeer.marketing@gmail.com"
-          class="border border-gray-300 hover:border-primary text-gray-700 hover:text-primary font-medium py-3 px-8 rounded-full transition duration-300">Email
-          Us</a>
+  <section id="home" class="pt-28 pb-20 md:pt-36 md:pb-28 gradient-bg">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="w-full md:w-1/2 mb-12 md:mb-0">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 fade-in">Professional Home Services & Repairs</h1>
+          <p class="text-xl text-gray-600 mb-8 fade-in">
+            Trusted, certified professionals ready to handle all your home maintenance needs with quality and reliability.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 fade-in">
+            <a href="tel:+923015996903" class="btn-secondary text-white font-medium py-4 px-8 rounded-full text-center">
+              <i class="fas fa-phone-alt mr-2"></i>Call Now
+            </a>
+            <a href="mailto:ghulamshabeer.marketing@gmail.com" class="btn-email text-white font-medium py-4 px-8 rounded-full text-center">
+              <i class="fas fa-envelope mr-2"></i>Email Us
+            </a>
+          </div>
+          <div class="mt-10 flex flex-wrap gap-6 fade-in">
+            <div class="flex items-center">
+              <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary mr-3">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <span class="text-gray-600">Licensed Professionals</span>
+            </div>
+            <div class="flex items-center">
+              <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary mr-3">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <span class="text-gray-600">24/7 Availability</span>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center fade-in">
+          <div class="relative">
+            <div class="w-80 h-80 bg-primary/10 rounded-full absolute -top-6 -left-6 z-0"></div>
+            <div class="w-80 h-80 bg-secondary/10 rounded-full absolute -bottom-6 -right-6 z-0"></div>
+            <div class="relative z-10 bg-white p-8 rounded-2xl shadow-xl">
+              <div class="flex justify-center mb-6">
+                <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white text-3xl">
+                  <i class="fas fa-headset"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold text-center text-gray-800 mb-4">Contact Us Today</h3>
+              <p class="text-gray-600 text-center mb-6">Reach out via call, WhatsApp, or email for immediate assistance.</p>
+              <div class="space-y-3">
+                <a href="tel:+923015996903" class="btn-primary block text-center text-white font-medium py-3 rounded-full">
+                  Call +92 301 5996903
+                </a>
+                <a href="mailto:ghulamshabeer.marketing@gmail.com" class="btn-email block text-center text-white font-medium py-3 rounded-full">
+                  Send Email
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center fade-in">
+          <div class="stats-number mb-2">500+</div>
+          <div class="text-gray-600">Happy Clients</div>
+        </div>
+        <div class="text-center fade-in">
+          <div class="stats-number mb-2">7+</div>
+          <div class="text-gray-600">Service Categories</div>
+        </div>
+        <div class="text-center fade-in">
+          <div class="stats-number mb-2">24/7</div>
+          <div class="text-gray-600">Availability</div>
+        </div>
+        <div class="text-center fade-in">
+          <div class="stats-number mb-2">98%</div>
+          <div class="text-gray-600">Satisfaction Rate</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- About Us Section -->
-  <section id="about" class="py-16 bg-white">
+  <section id="about" class="section-padding bg-lightGray">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Who We Are</h2>
-      <div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">About Our Company</h2>
+        <div class="h-1 w-20 bg-primary rounded-full mx-auto"></div>
+        <p class="text-gray-600 mt-6">Learn what makes us the trusted choice for home services</p>
+      </div>
+      
+      <div class="flex flex-col md:flex-row items-center justify-center gap-12 max-w-6xl mx-auto">
         <div class="w-full md:w-1/2 fade-in">
-          <p class="text-lg text-gray-600 text-center md:text-left">
-            At Ghulam Shabeer Services, we are your trusted partner for all home maintenance and repair needs. With
-            years of industry experience, we've built a network of skilled, certified professionals who specialize in
-            electrical work, plumbing, HVAC systems, appliance repairs, roofing, locksmith services, and pest control.
-            We understand that your home is your sanctuary, which is why we carefully vet every service provider in our
-            network to ensure they meet our strict standards for quality, reliability, and professionalism. Whether
-            you're dealing with an emergency repair or planning a home improvement project, we make it simple to connect
-            with the right experts who will get the job done right the first time.
-          </p>
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" 
+                 alt="Professional service team" class="rounded-2xl shadow-lg">
+            <div class="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-2xl shadow-lg">
+              <div class="text-3xl font-bold">10+</div>
+              <div class="text-sm">Years Experience</div>
+            </div>
+          </div>
         </div>
-        <div class="w-full md:w-1/2 flex justify-center fade-in">
-          <div class="w-64 h-64 bg-gray-200 rounded-full overflow-hidden flex items-center justify-center">
-            <i class="fas fa-headset text-6xl text-primary"></i>
+        <div class="w-full md:w-1/2 fade-in">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-6">Your Trusted Home Service Partner</h3>
+          <p class="text-lg text-gray-600 mb-6">
+            At Ghulam Shabeer Services, we've built a reputation for excellence in connecting homeowners with skilled, certified professionals for all their maintenance and repair needs.
+          </p>
+          <p class="text-lg text-gray-600 mb-8">
+            Our rigorous vetting process ensures that every service provider in our network meets the highest standards of quality, reliability, and professionalism. We understand that your home is your sanctuary, which is why we're committed to making every service experience exceptional.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="tel:+923015996903" class="btn-primary text-white font-medium py-3 px-6 rounded-full text-center">
+              <i class="fas fa-phone-alt mr-2"></i>Call Us
+            </a>
+            <a href="mailto:ghulamshabeer.marketing@gmail.com" class="btn-email text-white font-medium py-3 px-6 rounded-full text-center">
+              <i class="fas fa-envelope mr-2"></i>Email Us
+            </a>
           </div>
         </div>
       </div>
@@ -160,174 +374,436 @@
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="py-16 bg-lightGray">
+  <section id="services" class="section-padding bg-white">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Professional Services</h2>
+        <div class="h-1 w-20 bg-primary rounded-full mx-auto"></div>
+        <p class="text-gray-600 mt-6">Comprehensive solutions for all your home maintenance needs</p>
+      </div>
+      
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Service Cards -->
-        <div class="service-card bg-white p-6 rounded-lg shadow-md fade-in">
-          <div class="text-4xl text-primary mb-4"><i class="fas fa-bolt"></i></div>
-          <h3 class="text-xl font-semibold mb-2">Electrical Services</h3>
-          <p class="text-gray-600 mb-4">Safe, reliable solutions for wiring, panel upgrades, lighting, and repairs.</p>
-          <a href="tel:+923015996903"
-            class="inline-block bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition duration-300">Call
-            Now</a>
+        <div class="service-card bg-white p-8 rounded-xl shadow-md fade-in">
+          <div class="text-5xl text-primary mb-6"><i class="fas fa-bolt"></i></div>
+          <h3 class="text-xl font-semibold mb-4">Electrical Services</h3>
+          <p class="text-gray-600 mb-6">Safe, reliable solutions for wiring, panel upgrades, lighting, and emergency electrical repairs.</p>
+          <div class="flex flex-col gap-3">
+            <a href="tel:+923015996903" class="btn-primary text-white font-medium py-2 rounded-full text-center">
+              <i class="fas fa-phone-alt mr-2"></i>Call Now
+            </a>
+            <a href="mailto:ghulamshabeer.marketing@gmail.com?subject=Electrical Services Inquiry" class="btn-email text-white font-medium py-2 rounded-full text-center">
+              <i class="fas fa-envelope mr-2"></i>Email
+            </a>
+          </div>
         </div>
 
-        <div class="service-card bg-white p-6 rounded-lg shadow-md fade-in">
-          <div class="text-4xl text-primary mb-4"><i class="fas fa-tools"></i></div>
-          <h3 class="text-xl font-semibold mb-2">Appliance Repair</h3>
-          <p class="text-gray-600 mb-4">Fast, dependable repairs for refrigerators, ovens, washers, dryers, and more.
-          </p>
-          <a href="tel:+923015996903"
-            class="inline-block bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition duration-300">Call
-            Now</a>
+        <div class="service-card bg-white p-8 rounded-xl shadow-md fade-in">
+          <div class="text-5xl text-primary mb-6"><i class="fas fa-tools"></i></div>
+          <h3 class="text-xl font-semibold mb-4">Appliance Repair</h3>
+          <p class="text-gray-600 mb-6">Expert repairs for refrigerators, ovens, washers, dryers, and all major household appliances.</p>
+          <div class="flex flex-col gap-3">
+            <a href="tel:+923015996903" class="btn-primary text-white font-medium py-2 rounded-full text-center">
+              <i class="fas fa-phone-alt mr-2"></i>Call Now
+            </a>
+            <a href="mailto:ghulamshabeer.marketing@gmail.com?subject=Appliance Repair Inquiry" class="btn-email text-white font-medium py-2 rounded-full text-center">
+              <i class="fas fa-envelope mr-2"></i>Email
+            </a>
+          </div>
         </div>
 
-        <div class="service-card bg-white p-6 rounded-lg shadow-md fade-in">
-          <div class="text-4xl text-primary mb-4"><i class="fas fa-fan"></i></div>
-          <h3 class="text-xl font-semibold mb-2">HVAC Services</h3>
-          <p class="text-gray-600 mb-4">Installation, repair, and maintenance of heating, cooling, and ventilation
-            systems.</p>
-          <a href="tel:+923015996903"
-            class="inline-block bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition duration-300">Call
-            Now</a>
+        <div class="service-card bg-white p-8 rounded-xl shadow-md fade-in">
+          <div class="text-5xl text-primary mb-6"><i class="fas fa-fan"></i></div>
+          <h3 class="text-xl font-semibold mb-4">HVAC Services</h3>
+          <p class="text-gray-600 mb-6">Installation, repair, and maintenance of heating, ventilation, and air conditioning systems.</p>
+          <div class="flex flex-col gap-3">
+            <a href="tel:+923015996903" class="btn-primary text-white font-medium py-2 rounded-full text-center">
+              <i class="fas fa-phone-alt mr-2"></i>Call Now
+            </a>
+            <a href="mailto:ghulamshabeer.marketing@gmail.com?subject=HVAC Services Inquiry" class="btn-email text-white font-medium py-2 rounded-full text-center">
+              <i class="fas fa-envelope mr-2"></i>Email
+            </a>
+          </div>
         </div>
 
-        <div class="service-card bg-white p-6 rounded-lg shadow-md fade-in">
-          <div class="text-4xl text-primary mb-4"><i class="fas fa-home"></i></div>
-          <h3 class="text-xl font-semibold mb-2">Roofing Services</h3>
-          <p class="text-gray-600 mb-4">Quality roof inspections, repairs, replacements, and installations.</p>
-          <a href="tel:+923015996903"
-            class="inline-block bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition duration-300">Call
-            Now</a>
+        <div class="service-card bg-white p-8 rounded-xl shadow-md fade-in">
+          <div class="text-5xl text-primary mb-6"><i class="fas fa-home"></i></div>
+          <h3 class="text-xl font-semibold mb-4">Roofing Services</h3>
+          <p class="text-gray-600 mb-6">Quality roof inspections, repairs, replacements, and installations by certified roofing experts.</p>
+          <div class="flex flex-col gap-3">
+            <a href="tel:+923015996903" class="btn-primary text-white font-medium py-2 rounded-full text-center">
+              <i class="fas fa-phone-alt mr-2"></i>Call Now
+            </a>
+            <a href="mailto:ghulamshabeer.marketing@gmail.com?subject=Roofing Services Inquiry" class="btn-email text-white font-medium py-2 rounded-full text-center">
+              <i class="fas fa-envelope mr-2"></i>Email
+            </a>
+          </div>
         </div>
 
-        <div class="service-card bg-white p-6 rounded-lg shadow-md fade-in">
-          <div class="text-4xl text-primary mb-4"><i class="fas fa-faucet"></i></div>
-          <h3 class="text-xl font-semibold mb-2">Plumbing Services</h3>
-          <p class="text-gray-600 mb-4">Leak detection, water heater installs, drain cleaning, and more.</p>
-          <a href="tel:+923015996903"
-            class="inline-block bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition duration-300">Call
-            Now</a>
+        <div class="service-card bg-white p-8 rounded-xl shadow-md fade-in">
+          <div class="text-5xl text-primary mb-6"><i class="fas fa-faucet"></i></div>
+          <h3 class="text-xl font-semibold mb-4">Plumbing Services</h3>
+          <p class="text-gray-600 mb-6">Leak detection, pipe repairs, water heater installs, drain cleaning, and full plumbing solutions.</p>
+          <div class="flex flex-col gap-3">
+            <a href="tel:+923015996903" class="btn-primary text-white font-medium py-2 rounded-full text-center">
+              <i class="fas fa-phone-alt mr-2"></i>Call Now
+            </a>
+            <a href="mailto:ghulamshabeer.marketing@gmail.com?subject=Plumbing Services Inquiry" class="btn-email text-white font-medium py-2 rounded-full text-center">
+              <i class="fas fa-envelope mr-2"></i>Email
+            </a>
+          </div>
         </div>
 
-        <div class="service-card bg-white p-6 rounded-lg shadow-md fade-in">
-          <div class="text-4xl text-primary mb-4"><i class="fas fa-key"></i></div>
-          <h3 class="text-xl font-semibold mb-2">Locksmith Services</h3>
-          <p class="text-gray-600 mb-4">24/7 emergency lockouts, rekeying, and security upgrades.</p>
-          <a href="tel:+923015996903"
-            class="inline-block bg-primary hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition duration-300">Call
-            Now</a>
+        <div class="service-card bg-white p-8 rounded-xl shadow-md fade-in">
+          <div class="text-5xl text-primary mb-6"><i class="fas fa-key"></i></div>
+          <h3 class="text-xl font-semibold mb-4">Locksmith Services</h3>
+          <p class="text-gray-600 mb-6">24/7 emergency lockouts, rekeying, lock repairs, and security system installations.</p>
+          <div class="flex flex-col gap-3">
+            <a href="tel:+923015996903" class="btn-primary text-white font-medium py-2 rounded-full text-center">
+              <i class="fas fa-phone-alt mr-2"></i>Call Now
+            </a>
+            <a href="mailto:ghulamshabeer.marketing@gmail.com?subject=Locksmith Services Inquiry" class="btn-email text-white font-medium py-2 rounded-full text-center">
+              <i class="fas fa-envelope mr-2"></i>Email
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- How It Works Section -->
-  <section id="how-it-works" class="py-16 bg-lightBlue">
+  <section id="how-it-works" class="section-padding bg-lightBlue">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">How It Works</h2>
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">How Our Service Works</h2>
+        <div class="h-1 w-20 bg-primary rounded-full mx-auto"></div>
+        <p class="text-gray-600 mt-6">Simple, fast, and reliable process to get your home issues resolved</p>
+      </div>
+      
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         <div class="text-center fade-in">
-          <div class="text-5xl text-primary mb-4">1</div>
-          <h3 class="text-xl font-semibold mb-2">Search for your service</h3>
-          <p class="text-gray-600">Browse our wide range of services and find what you need.</p>
+          <div class="relative mb-6">
+            <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+              <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl font-bold">1</div>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+          <p class="text-gray-600">Call, email, or message us with your service requirements.</p>
         </div>
 
         <div class="text-center fade-in">
-          <div class="text-5xl text-primary mb-4">2</div>
-          <h3 class="text-xl font-semibold mb-2">Call our dedicated phone line</h3>
-          <p class="text-gray-600">Reach out to our friendly customer service team.</p>
+          <div class="relative mb-6">
+            <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+              <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl font-bold">2</div>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Get Matched Instantly</h3>
+          <p class="text-gray-600">We connect you with vetted professionals specializing in your specific need.</p>
         </div>
 
         <div class="text-center fade-in">
-          <div class="text-5xl text-primary mb-4">3</div>
-          <h3 class="text-xl font-semibold mb-2">Get connected to licensed providers</h3>
-          <p class="text-gray-600">We connect you with trusted professionals in your area.</p>
+          <div class="relative mb-6">
+            <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+              <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl font-bold">3</div>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Receive Quality Service</h3>
+          <p class="text-gray-600">Your assigned expert resolves your issue efficiently with guaranteed satisfaction.</p>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center fade-in">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Multiple Ways to Reach Us</h3>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="tel:+923015996903" class="btn-primary text-white font-medium py-3 px-8 rounded-full inline-flex items-center">
+            <i class="fas fa-phone-alt mr-2"></i>Call Now
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=923015996903&text=How Can i help you..?" 
+             class="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-8 rounded-full inline-flex items-center transition duration-300">
+            <i class="fab fa-whatsapp mr-2 text-xl"></i>WhatsApp
+          </a>
+          <a href="mailto:ghulamshabeer.marketing@gmail.com" class="btn-email text-white font-medium py-3 px-8 rounded-full inline-flex items-center">
+            <i class="fas fa-envelope mr-2"></i>Send Email
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us Section -->
-  <section id="why-choose-us" class="py-16 bg-darkBlue text-white">
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section-padding bg-lightGray">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
-      <div class="max-w-2xl mx-auto">
-        <div class="flex items-start mb-6 fade-in">
-          <div class="text-secondary text-xl mr-4"><i class="fas fa-check-circle"></i></div>
-          <div>
-            <h3 class="text-xl font-semibold mb-1">Fast and reliable connections</h3>
-            <p class="text-gray-300">We quickly connect you with the right service providers.</p>
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">What Our Clients Say</h2>
+        <div class="h-1 w-20 bg-primary rounded-full mx-auto"></div>
+        <p class="text-gray-600 mt-6">Don't just take our word for it - hear from our satisfied customers</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="testimonial-card p-8 rounded-2xl shadow-md fade-in">
+          <div class="flex items-center mb-6">
+            <div class="text-amber-400 text-2xl">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-6">"The electrician they sent was professional and fixed our wiring issue in no time. Would definitely use their service again!"</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+            <div>
+              <h4 class="font-semibold text-gray-800">Ahmed R.</h4>
+              <p class="text-gray-500">Lahore</p>
+            </div>
           </div>
         </div>
-
-        <div class="flex items-start mb-6 fade-in">
-          <div class="text-secondary text-xl mr-4"><i class="fas fa-check-circle"></i></div>
-          <div>
-            <h3 class="text-xl font-semibold mb-1">Services available nationwide</h3>
-            <p class="text-gray-300">We serve customers across the entire United States.</p>
+        
+        <div class="testimonial-card p-8 rounded-2xl shadow-md fade-in">
+          <div class="flex items-center mb-6">
+            <div class="text-amber-400 text-2xl">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-6">"My AC broke down in the middle of summer. Ghulam Shabeer Services connected me with a technician who came within hours and fixed it."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+            <div>
+              <h4 class="font-semibold text-gray-800">Fatima K.</h4>
+              <p class="text-gray-500">Karachi</p>
+            </div>
           </div>
         </div>
-
-        <div class="flex items-start mb-6 fade-in">
-          <div class="text-secondary text-xl mr-4"><i class="fas fa-check-circle"></i></div>
-          <div>
-            <h3 class="text-xl font-semibold mb-1">100% free to call and connect</h3>
-            <p class="text-gray-300">No charges for using our connection service.</p>
+        
+        <div class="testimonial-card p-8 rounded-2xl shadow-md fade-in">
+          <div class="flex items-center mb-6">
+            <div class="text-amber-400 text-2xl">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
           </div>
-        </div>
-
-        <div class="flex items-start mb-6 fade-in">
-          <div class="text-secondary text-xl mr-4"><i class="fas fa-check-circle"></i></div>
-          <div>
-            <h3 class="text-xl font-semibold mb-1">Trusted providers only</h3>
-            <p class="text-gray-300">We vet all service providers for quality and reliability.</p>
+          <p class="text-gray-600 mb-6">"I've used their plumbing services twice now, and both times I've been impressed with the quality of work and professionalism."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+            <div>
+              <h4 class="font-semibold text-gray-800">Bilal S.</h4>
+              <p class="text-gray-500">Islamabad</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Call to Action Section -->
-  <section id="contact" class="py-16 bg-secondary text-white">
+  <!-- CTA Section -->
+  <section class="py-16 bg-primary">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">Need help now? Call us today and get connected instantly.</h2>
-      <p class="text-xl mb-10">+92 301 5996903</p>
+      <h2 class="text-3xl font-bold text-white mb-6">Ready to Get Your Home Issues Resolved?</h2>
+      <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">Contact us now and let our professionals take care of your home maintenance needs with quality and efficiency.</p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="https://api.whatsapp.com/send?phone=923015996903&text=How Can i help you..?"
-          class="bg-white hover:bg-gray-100 text-secondary font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
-          Wattsapp Us</a>
-        <a href="mailto:ghulamshabeer.marketing@gmail.com"
-          class="border border-white hover:bg-white hover:text-secondary text-white font-medium py-3 px-8 rounded-full transition duration-300">Email
-          Us</a>
+        <a href="tel:+923015996903" class="btn-secondary text-white font-medium py-4 px-8 rounded-full inline-flex items-center justify-center">
+          <i class="fas fa-phone-alt mr-2"></i>Call +92 301 5996903
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=923015996903&text=How Can i help you..?" 
+           class="bg-white hover:bg-gray-100 text-primary font-medium py-4 px-8 rounded-full inline-flex items-center justify-center transition duration-300">
+          <i class="fab fa-whatsapp mr-2 text-xl"></i>WhatsApp Us
+        </a>
+        <a href="mailto:ghulamshabeer.marketing@gmail.com" class="btn-email text-white font-medium py-4 px-8 rounded-full inline-flex items-center justify-center">
+          <i class="fas fa-envelope mr-2"></i>Email Us
+        </a>
       </div>
     </div>
   </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+        <div class="h-1 w-20 bg-primary rounded-full mx-auto"></div>
+        <p class="text-gray-600 mt-6">Have questions or ready to schedule a service? Reach out to us today.</p>
+      </div>
+      
+      <div class="flex flex-col md:flex-row gap-12 max-w-5xl mx-auto">
+        <div class="w-full md:w-2/5">
+          <div class="bg-lightGray p-8 rounded-2xl shadow-md">
+            <h3 class="text-xl font-semibold text-gray-800 mb-6">Contact Information</h3>
+            
+            <div class="flex items-start mb-6">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-800">Phone Number</h4>
+                <a href="tel:+923015996903" class="text-gray-600 hover:text-primary">+92 301 5996903</a>
+              </div>
+            </div>
+            
+            <div class="flex items-start mb-6">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-800">Email Address</h4>
+                <a href="mailto:ghulamshabeer.marketing@gmail.com" class="text-gray-600 hover:text-primary">ghulamshabeer.marketing@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-800">Working Hours</h4>
+                <p class="text-gray-600">24/7 Emergency Services Available</p>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-gray-200">
+              <h4 class="font-semibold text-gray-800 mb-4">Prefer to email us?</h4>
+              <a href="mailto:ghulamshabeer.marketing@gmail.com" class="btn-email block text-center text-white font-medium py-3 rounded-full">
+                <i class="fas fa-envelope mr-2"></i>Send Us an Email
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="w-full md:w-3/5">
+          <div class="bg-lightGray p-8 rounded-2xl shadow-md">
+            <h3 class="text-xl font-semibold text-gray-800 mb-6">Send Us a Message</h3>
+            <form>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                  <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
+                </div>
+                <div>
+                  <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                  <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
+                </div>
+              </div>
+              
+              <div class="mb-6">
+                <label for="service" class="block text-gray-700 mb-2">Service Needed</label>
+                <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
+                  <option value="">Select a service</option>
+                  <option value="electrical">Electrical Services</option>
+                  <option value="plumbing">Plumbing Services</option>
+                  <option value="hvac">HVAC Services</option>
+                  <option value="appliance">Appliance Repair</option>
+                  <option value="roofing">Roofing Services</option>
+                  <option value="locksmith">Locksmith Services</option>
+                </select>
+              </div>
+              
+              <div class="mb-6">
+                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"></textarea>
+              </div>
+              
+              <button type="submit" class="btn-primary w-full text-white font-medium py-4 px-8 rounded-full">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://api.whatsapp.com/send?phone=923015996903&text=How Can i help you..?" class="whatsapp-icon" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+  </a>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
+  <footer class="bg-darkGray text-white py-12">
     <div class="container mx-auto px-4">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-6 md:mb-0">
-          <p class="text-gray-400">© 2025 Ghulam Shabeer Ahmad – Connecting Customers with Services Nationwide</p>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-6">
+            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-3">GS</div>
+            <div class="text-xl font-bold">Ghulam Shabeer <span class="text-primary">Services</span></div>
+          </div>
+          <p class="text-gray-400 mb-6">Your trusted partner for all home maintenance and repair needs across Pakistan.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="fab fa-facebook-f text-lg"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="fab fa-twitter text-lg"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="fab fa-instagram text-lg"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="fab fa-linkedin-in text-lg"></i>
+            </a>
+          </div>
         </div>
-        <div class="flex flex-col md:flex-row items-center">
-          <div class="mb-4 md:mb-0 md:mr-8">
-            <a href="#" class="text-gray-400 hover:text-white mr-4">Privacy Policy</a>
-            <a href="#" class="text-gray-400 hover:text-white">Terms</a>
-          </div>
-          <div class="flex flex-col md:flex-row">
-            <a href="mailto:ghulamshabeer.marketing@gmail.com"
-              class="text-gray-400 hover:text-white mb-2 md:mb-0 md:mr-6">
-              <i class="fas fa-envelope mr-2"></i>ghulamshabeer.marketing@gmail.com
-            </a>
-            <a href="tel:+923015996903" class="text-gray-400 hover:text-white">
-              <i class="fas fa-phone mr-2"></i>+92 301 5996903
-            </a>
-          </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+            <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition">How It Works</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Our Services</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Electrical Services</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Plumbing Services</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">HVAC Services</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Appliance Repair</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Emergency Services</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Contact Info</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-phone-alt text-primary mr-3 mt-1"></i>
+              <a href="tel:+923015996903" class="text-gray-400 hover:text-white">+92 301 5996903</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope text-primary mr-3 mt-1"></i>
+              <a href="mailto:ghulamshabeer.marketing@gmail.com" class="text-gray-400 hover:text-white">ghulamshabeer.marketing@gmail.com</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fab fa-whatsapp text-primary mr-3 mt-1"></i>
+              <a href="https://api.whatsapp.com/send?phone=923015996903&text=How Can i help you..?" class="text-gray-400 hover:text-white">WhatsApp</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-clock text-primary mr-3 mt-1"></i>
+              <span class="text-gray-400">24/7 Available</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Ghulam Shabeer Services. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+          <a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
         </div>
       </div>
     </div>
@@ -375,6 +851,16 @@
     // Initial check and then on scroll
     checkFade();
     window.addEventListener('scroll', checkFade);
+    
+    // Form submission handling
+    const contactForm = document.querySelector('form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your message! We will contact you shortly.');
+        this.reset();
+      });
+    }
   </script>
 </body>
 
